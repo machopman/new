@@ -70,6 +70,7 @@ def webhook():
 def movie(event):
     question = event.message.text
     movie = re.sub('[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890]', '', question).replace(' ', '')
+    
     if movie !='':
 		cut = mmcut(movie)
 		words = []
