@@ -70,7 +70,7 @@ def webhook():
 def movie(event):
     question = event.message.text
     movie = re.sub('[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890]', '', question).replace(' ', '')
-	if movie !='':
+    if movie !='':
 		cut = mmcut(movie)
 		words = []
 		for row in cut:
@@ -217,7 +217,7 @@ def movie(event):
 				Type(classify, event, movie_name, userid, user, question, name)
 			elif (name == '') and (movie_name == '') and classify == 9:
 				general(question, event, userid, user)
-	elif movie == '':
+    elif movie == '':
 			translator = Translator()
             translations = translator.translate(question, dest='th')
             text =translations.text
